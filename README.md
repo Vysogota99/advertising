@@ -20,7 +20,7 @@
 <ul>
     <li>Войти в контейнере c postgres в учетную запись postgres (пароль - "qwerty"):
     <br>
-    <code>docker exec -it deployments_psql_1 /bin/bash</code>
+    <code>docker exec -it deployments_store_1 /bin/bash</code>
     <br>
         <code>psql -U postgres -p 5432 -h store</code>
     <br>
@@ -45,7 +45,7 @@
     <li>
         Зайти в контейнер с golang:
         <br>
-        <code>docker exec -it deployments_go_1 /bin/bash</code>
+        <code>docker exec -it deployments_backend_1 /bin/bash</code>
     </li>
     <li>В директории ./build запустить миграции командой:
     <br>
