@@ -13,12 +13,12 @@ func (a *AdRepository) Create(models.Ad) (int, error) {
 }
 
 // GetOne ...
-func (a *AdRepository) GetOne(int) (models.Ad, error) {
+func (a *AdRepository) GetOne(id int, description, photos bool) (*models.Ad, error) {
 	result := models.Ad{}
-	return result, nil
+	return &result, nil
 }
 
 // GetList ...
-func (a *AdRepository) GetList(curr int, limit int, offset int) ([]models.Ad, error) {
-	return nil, nil
+func (a *AdRepository) GetList(limit int, offset int, sortBy, sortDirection string) ([]models.Ad, int, error) {
+	return nil, 0, nil
 }

@@ -12,6 +12,6 @@ type Store interface {
 // AdRepository - интерфейс, содержащий методы для получаения информации об объявлениях
 type AdRepository interface {
 	Create(models.Ad) (int, error)
-	GetOne(int) (models.Ad, error)
-	GetList(curr int, limit int, offset int) ([]models.Ad, error)
+	GetOne(id int, description, photos bool) (*models.Ad, error)
+	GetList(limit int, offset int, sortBy, sortDirection string) ([]models.Ad, int, error)
 }

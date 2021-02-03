@@ -24,5 +24,7 @@ func NewRouter(serverPort string, store store.Store) *Router {
 // Setup - найстройка роутера
 func (r *Router) Setup() *gin.Engine {
 	r.router.POST("/ad", r.CreatAdHandler)
+	r.router.GET("/ad/:id", r.GetAdHandler)
+	r.router.GET("/ads", r.GetAdsHandler)
 	return r.router
 }

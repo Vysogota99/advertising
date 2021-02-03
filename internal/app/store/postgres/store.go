@@ -7,7 +7,7 @@ import (
 
 // Store - postgres implementation of store
 type Store struct {
-	DB            *sqlx.DB
+	DB           *sqlx.DB
 	adRepository store.AdRepository
 }
 
